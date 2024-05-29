@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centro{
+    text-align: center;
+    align-items: center;
+}
+
+body{
+    font-family: Questrial; /* Fonte Family do Site*/ 
+}
+.centro{
+    text-align: center;
+    align-items: center;
+}
+
+.questrial-regular {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.top-bar1{
+    background-color: rgb(231, 160, 246);
+    color: white;
+    width: 100%;
+    padding: 2px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.top-bar1 p{
+    margin-top: 10px;
+}
+
+.top-bar2{
+    background-color: rgb(215, 215, 215);
+    color: gray;
+    width: 100%;
+    height: 99px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    position: relative;
+}
+.top-bar2 input{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: inherit;
+    color: #8b8b8b;
+    border: solid;
+    padding: 0.7rem 1rem;
+    transition: border-color 0.3s ease-in-out; /* Suaviza a transição da cor da borda */
+    background-color: rgb(215, 215, 215);
+    background-image: url(images/lupa-cinza-escuro.png); /* Adicionar ícone como imagem de fundo */
+    background-repeat: no-repeat; /* Evitar que o ícone se repita */
+    background-position: calc(100% - 10px) center; /* Posicionar o ícone à direita */
+    background-size: 30px; /* Definir o tamanho do ícone */
+    position: absolute;
+} 
+
+#iconeLogin {
+    display: inline-block;
+    width: 30px;
+    margin-top: 25px; /* Ajustado para corresponder à margem superior do campo de pesquisa */
+    margin-left: 760px; /* Ajustado para garantir espaço entre o campo de pesquisa e o ícone */
+    position: absolute;
+    cursor: pointer;
+}
+
+#titulo-perfil {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 805px; /* Ajustado para garantir espaço entre o ícone e o texto "MINHA CONTA" */ /* Ajustado para corresponder à margem superior do campo de pesquisa */
+    cursor: pointer;
+}
+
+#titulo-CadastroOuLogin {
+    position: absolute;
+    margin-left: 805px; /* Ajustado para garantir espaço entre "MINHA CONTA" e "ENTRE OU CADASTRE" */
+    margin-top: 42px; /* Ajustado para corresponder à margem superior do campo de pesquisa */
+    cursor: pointer;
+}
+
+#itens-favoritos{
+    margin-top: 20px;
+    margin-left: 1060px;
+    width: 35px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#itens-sacola{
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 1110px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+
+header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    height: 80px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.header-content p {
+    margin: 0 45px; /* Espaçamento horizontal entre os parágrafos */
+    font-size: 1.2rem; /* Tamanho da fonte relativo */
+    cursor: pointer;
+}
+
+.header-content p{
+    margin-top: 20px;
+}
+
+@media (max-width: 1200px){
+    .header-content p {
+        font-size: 1rem; /*Ajuste para tela menores*/
+    }
+}
+
+@media (max-width: 900px){
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+
+@media (min-width: 300px) and (max-width: 440px){
+    .header-content p{
+        font-size: 0.65rem;
+        margin: 0 5px;
+    }
+}
+
+@media (min-width: 441px) and (max-width: 539px){
+    .header-content p {
+        font-size: 0.79rem;
+        margin: 0 6px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850){
+    .header-content p {
+        font-size: 0.50rem;
+        margin: 0 6px;
+    }
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Ajuste a largura máxima conforme desejado */
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-button-prev {
+    left: 0;
+}
+
+.carousel-button-next {
+    right: 0;
+}

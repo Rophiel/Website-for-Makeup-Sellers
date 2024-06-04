@@ -21,7 +21,7 @@
         <img src="images/perfil-icone-cinza.png" alt="" id="iconeLogin">
         <p id="titulo-perfil"> MINHA CONTA </p>
         <p id="titulo-CadastroOuLogin"> ENTRE OU CADASTRE </p>
-        <img src="images/coracao-cinza-removebg-preview.png" id="itens-favoritos">
+        <img src="images/coracao-cinza-removebg-preview.png" id="itens-favoritos" onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
         <img src="images/bolsa-cinza-removebg-preview.png" id="itens-sacola">
     </div>
     <header>
@@ -38,7 +38,7 @@
         </div>
       </nav>
     </header>
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide" style="position: relative;">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -64,20 +64,35 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-      <br>
-      <div>
-        <p style="font-size: 30pt; margin: 0px 0px 10px 130px;"> LANÇAMENTOS <p>
+      <div class="titulo-lancamentos">
+        <p id="titleLancamentos"> LANÇAMENTOS <p>
+        <p id="descricaoLancamentos"> Revele sua Beleza: Novidades em Maquiagem! </p>
       </div>
-      <br>
+      <div>
+        <img src="images/raspa-batom.jpg" alt="raspa-batom" style="position: fixed;">
+      </div>
       <div class="container">      
         <div class="card1">
-          <img src="images/93026_1.jpg" alt="batom">
-      </div>
+          <img src="images/93026_1.jpg" alt="batom" id="produto-card1">
+          <img src="images/coracao-cinza-removebg-preview.png" alt="coracao-favorito" id="coracao-favorito-card1" onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
+          <p style="margin-left: 29px; margin-top: 30px;"> MAKEUP </p>
+          <P id="preco-antigo-card1" style="margin-left: 29px; color: rgb(202, 202, 202); position: relative;"><s>R$ 30,90 </s></P>
+          <p id="preco-novo-card1" style="margin-left: 29px; font-size: 20pt;"> R$ 23,90 </p>
+          <button id="botao-adicionar"> ADICIONAR </button>
+        </div>
         <div class="card2">
-          <img src="images/GUEST_1dad7ebe-9f97-42a3-a006-e6f5d82644e2.jpg" alt="bush">
+          <img src="images/GUEST_1dad7ebe-9f97-42a3-a006-e6f5d82644e2.jpg" alt="bush" id="produto-card2">
+          <img src="images/coracao-cinza-removebg-preview.png" alt="coracao-favorito" id="coracao-favorito-card2" onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
+          <p style="margin-left: 29px; margin-top: 30px;"> MAKEUP </p>
+          <p id="preco-novo-card2" style="margin-left: 29px; font-size: 20pt; margin-top: 50px;"> R$ 52,90 </p>
+          <button id="botao-adicionar"> ADICIONAR </button>
         </div>
         <div class="card3">
-          <img src="images/pincel.png" alt="">
+          <img src="images/pincel.png" alt="pincel" id="produto-card3">
+          <img src="images/coracao-cinza-removebg-preview.png" alt="coracao-favorito" id="coracao-favorito-card3" onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
+          <p style="margin-left: 29px; margin-top: 30px;"> MAKEUP </p>
+          <p id="preco-novo-card3" style="margin-left: 29px; font-size: 20pt; margin-top: 50px;"> R$ 49,90 </p>
+          <button id="botao-adicionar"> ADICIONAR </button>
         </div>
       </div>
       

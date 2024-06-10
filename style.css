@@ -119,6 +119,15 @@ input[type="search"]::-ms-clear {
 	cursor: pointer;
 }
 
+#titulo-acessorio:hover,
+#titulo-labios:hover,
+#titulo-rosto:hover,
+#titulo-skincare:hover,
+#titulo-corpo:hover,
+#titulo-lancamento:hover{
+	color: rgb(231, 160, 246);
+}
+
 header {
 	background-color: rgb(0, 0, 0);
 	color: white;
@@ -155,6 +164,10 @@ header {
 	margin-top: 20px;
 }
 
+.responsive-title{
+	font-size: 20px;
+}
+
 .card1,
 .card2,
 .card3 {
@@ -164,6 +177,13 @@ header {
 	background: #ffffff;
 	position: relative;
 	box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+#chevron-icone{
+	position: absolute;
+	width: 13px;
+	margin-top: 8px;
+	margin-left: 20px;
 }
 
 .card1 #produto-card1,
@@ -224,6 +244,11 @@ header {
 	font-size: 16pt;
 }
 
+#botao-adicionar:hover {
+	background-color: black;
+	color: white;
+}
+
 .container {
 	display: flex;
 	position: relative;
@@ -231,11 +256,33 @@ header {
 	align-items: center; /* Centraliza os cards verticalmente */
 	/*height: 100vh;  Ajusta a altura do container para a altura total da viewport */
 	gap: 120px;
+	position: relative;
+    z-index: 1; 
 }
 
-@media (max-width: 1200px) {
-	.header-content p {
-		font-size: 1rem; /*Ajuste para tela menores*/
+
+@media (min-width: 1080px) and (max-width: 1200px) {
+	.header-content p{
+		display: none; /*Tira as letras*/
+	}
+
+	.top-bar2{
+		height: 85px;
+	}
+
+	.top-bar2 input{
+		position: relative;
+		margin-bottom: 95px;
+		align-items: center;
+		left: -35px;
+	}
+
+	.top-bar2 p {
+		display: none;
+	}
+
+	#itens-favoritos{
+		margin-right: 200px;
 	}
 }
 
@@ -245,17 +292,42 @@ header {
 	}
 }
 
-@media (min-width: 300px) and (max-width: 440px) {
-	.header-content p {
-		font-size: 0.65rem;
-		margin: 0 5px;
-	}
-}
 
 @media (min-width: 441px) and (max-width: 539px) {
 	.header-content p {
 		font-size: 0.79rem;
 		margin: 0 6px;
+	}
+}
+
+@media (min-width: 412px) and (max-width: 440px){
+	.header-content {
+		font-size: 0.1rem;
+		margin: 0 1px;
+		gap: 10px;
+	}
+
+	.top-bar2 input{
+		width: 150px;
+		height: 35px;
+	}
+
+	.top-bar2 img {
+		display: none;
+	}
+	
+	.carousel-item img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: top;
+	}
+}
+
+@media (min-width: 300px) and (max-width: 440px) {
+	.header-content p {
+		font-size: 0.65rem;
+		margin: 0 5px;
 	}
 }
 

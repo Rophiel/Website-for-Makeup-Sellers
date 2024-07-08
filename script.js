@@ -14,3 +14,11 @@ function mudarIcone(id){
 function restaurarIcone(id){
     document.getElementById(id).src = "images/bolsa-cinza-removebg-preview.png";
 }
+
+function mudarPerfil(id){
+    document.getElementById(id).src = "images/perfil-icone-rosa.png";
+}
+
+function restaurarPerfil(id){
+    document.getElementById(id).src = "images/perfil-icone-cinza.png";
+}

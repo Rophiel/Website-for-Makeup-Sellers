@@ -12,6 +12,7 @@
 body {
 	font-family: Questrial; /* Fonte Family do Site*/
 }
+
 .centro {
 	text-align: center;
 	align-items: center;
@@ -24,16 +25,19 @@ body {
 }
 
 .top-bar1 {
+	top: 0;
 	background-color: rgb(231, 160, 246);
 	color: white;
 	width: 100%;
+	position: fixed;
 	padding: 1px 20px;
 	text-align: center;
 	font-size: 0.9rem;
+	z-index: 1000;
 }
 
 .top-bar1 p {
-	margin-top: 10px;
+	font-size: 19pt;
 }
 
 .top-bar2 {
@@ -42,8 +46,10 @@ body {
 	width: 100%;
 	height: 99px;
 	padding: 10px 20px;
+	margin-top: 30px;
 	font-size: 0.9rem;
-	position: relative;
+	position: fixed;
+	z-index: 999;
 }
 .top-bar2 input {
 	margin-top: 15px;
@@ -103,6 +109,10 @@ input[type="search"]::-ms-clear {
 	cursor: pointer;
 }
 
+#titulo-CadastroOuLogin:hover, #titulo-perfil:hover{
+	color:  rgb(231, 160, 246);
+}
+
 #itens-favoritos {
 	margin-top: 20px;
 	margin-left: 1729px;
@@ -134,34 +144,77 @@ header {
 	width: 100%;
 	padding: 10px 20px;
 	height: 80px;
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	display: flex;
 	margin: 0;
+	margin-top: 150px;
 	box-sizing: border-box;
 	justify-content: center;
 	align-items: center;
+	z-index: 998; /*Garante que o header fica acima de outros elementos*/
 }
 
 .header-content {
+	list-style: none;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 20px;
 	align-items: center;
 	text-align: center;
 	width: 100%;
+	margin-bottom: 20px;
+}
+nav{
+	display: flex;
+	justify-content: center;
 }
 
-.header-content p {
+
+.header-content a {
 	margin: 0 45px; /* Espaçamento horizontal entre os parágrafos */
 	font-size: 1.2rem; /* Tamanho da fonte relativo */
 	cursor: pointer;
 }
 
-.header-content p {
+.header-content a {
 	margin-top: 20px;
+}
+
+.menu-item {
+	position: relative; /* Define o posicionamento relativo para conter o submenu */
+  }
+  
+.submenu {
+	display: none; /* Esconde o submenu inicialmente */
+	position: fixed; /* Posiciona o submenu em relação ao menu-item */
+	top: 100px; /* Posiciona o submenu abaixo do item do menu */
+	
+	margin-top: 79px;
+	left: 50%; /* Alinha o submenu à esquerda do item do menu */
+	transform: translateX(-50%); /* Ajusta para centralizar exatamente */
+	background-color: #ff0000; /* Define a cor de fundo do submenu */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao submenu */
+	min-width: 200px; /* Define a largura mínima do submenu */
+	width: 1190px;
+	height: 500px;
+	z-index: 1001; /* Garante que o submenu fique acima de outros elementos */
+}
+  
+.submenu a {
+	display: block; /* Cada link ocupa uma linha inteira no submenu */
+	padding: 10px 20px; /* Define o espaçamento interno dos links do submenu */
+	text-decoration: none; /* Remove a sublinha dos links */
+	color: #ffffff; /* Define a cor dos links */
+}
+
+.submenu:hover{
+	display: block;
+}
+
+.menu-item:hover .submenu {
+	display: block; /* Exibe o submenu ao passar o mouse sobre o menu-item */
 }
 
 .responsive-title{
@@ -184,6 +237,11 @@ header {
 	width: 13px;
 	margin-top: 8px;
 	margin-left: 20px;
+	cursor: pointer;
+}
+
+#chevron-icone:hover{
+	transform: rotate(180deg);
 }
 
 .card1 #produto-card1,
@@ -216,15 +274,19 @@ header {
 	); /* Aumenta um pouco o tamanho da imagem quando o mouse passa por cima */
 }
 
+
+
 .titulo-lancamentos #titleLancamentos {
 	font-size: 30pt;
-	margin-left: 380px;
+	left: 0;
 	margin-top: 60px;
+	margin-left: 380px;
 	margin-bottom: 0px;
 }
 
 .titulo-lancamentos #descricaoLancamentos {
 	font-size: 15pt;
+	left: 0;
 	margin-left: 380px;
 	margin-bottom: 60px;
 }
@@ -234,7 +296,7 @@ header {
 	border-radius: 10px;
 	width: 190px;
 	height: 50px;
-	margin-left: 57px;
+	margin-left: 40px;
 	background-color: #ffffff;
 	border: solid;
 	outline: none;
@@ -242,6 +304,8 @@ header {
 	align-items: center;
 	font-family: Questrial;
 	font-size: 16pt;
+	right: 0;
+	left: 0;
 }
 
 #botao-adicionar:hover {
@@ -260,6 +324,196 @@ header {
     z-index: 1; 
 }
 
+footer{
+	background-color: black;
+	margin-top: 150px;
+	bottom: 0;
+	height: 300px;
+}
+
+footer ul li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: 15px;
+	margin: 5px;
+}
+
+.footer-marca{
+	position: absolute;
+	margin-top: 20px;
+}
+
+.footer-marca a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer-suporte{
+	margin-top: 20px;
+	margin-left: 340px;
+	position: absolute;
+}
+
+.footer-suporte a{
+	text-decoration: none;
+	color: white;
+}
+
+@media (max-width: 1920px){
+
+	.top-bar1 {
+		height: 30px;
+		padding: 0px 0px 0px 0px;
+		z-index: 1000;
+	}
+
+	.top-bar1 p{
+		top: 0;
+		bottom: 0;
+		font-size: 1rem;
+	}
+
+	.top-bar2{
+		top: 0;
+		height: 85px;
+		padding: 0px 0px 0px 0px;
+		background-color: rgb(237, 237, 237);
+		margin-top: 30px;
+		font-size: 0.9rem;
+		position: fixed;
+		z-index: 999;
+	}
+
+	.top-bar2 input{
+		width: 295px;
+		height: 45px;
+	}
+	
+	#itens-favoritos {
+		margin-top: 20px;
+		margin-left: 1120px;
+		width: 35px;
+		position: absolute;
+		cursor: pointer;
+	}
+	
+	#itens-sacola {
+		width: 35px;
+		margin-top: 20px;
+		margin-left: 1169px;
+		position: absolute;
+		cursor: pointer;
+	}
+
+	.circle-quantidade {
+		width: 19px;
+		height: 19px;
+		background-color:  rgb(231, 160, 246);
+		margin-top: 35px;
+		border-radius: 50%;
+		margin-left: 1192px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		position: absolute;
+		justify-content: center;
+    	align-items: center;
+		text-align: center;
+		z-index: 10;
+		font-size: 9.8pt;
+		color:  rgb(237, 237, 237);
+		font-weight: bold;
+	}
+
+	.circle-quantidade-value{
+		top: 0;
+		bottom: 0;
+	}
+
+	header{
+		margin-top: 114px;
+		height: 60px;
+		padding: 19px 0px 0px 0px;
+	}
+
+	.header-content a {
+		font-size: 0.90rem;
+	}
+
+
+
+	#titulo-perfil,
+	#titulo-CadastroOuLogin{
+		margin-left: 890px;
+	}
+
+	#titulo-lancamento {
+		margin-bottom: 15px;
+	}
+
+	.titulo-lancamentos #titleLancamentos{
+		font-size: 22pt;
+	}
+
+	.titulo-lancamentos #descricaoLancamentos{
+		font-size: 15pt;
+	}
+
+	.titulo-lancamentos #titleLancamentos,
+	.titulo-lancamentos #descricaoLancamentos {
+		margin-left: 80px;
+	}
+
+	.card1,
+	.card2,
+	.card3{
+		width: 260px;
+		height: 360px;
+	}
+
+	.card1 #produto-card1,
+	.card2 #produto-card2,
+	.card3 #produto-card3 {
+		position: absolute;
+		width: 110px;
+		height: 100px;
+		margin-top: 100px;
+		margin-left: 75px;
+		border-radius: 15px;
+	}
+
+	#coracao-favorito-card1,
+	#coracao-favorito-card2,
+	#coracao-favorito-card3 {
+		width: 25px;
+		position: absolute;
+		margin-top: 20px;
+		margin-left: 210px;
+	}
+	
+	#botao-adicionar{
+		position: absolute;
+		margin-top: 290px;
+		margin-right: 1400px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	#titulo-produto1,
+	#titulo-produto2,
+	#titulo-produto3 {
+		
+	}
+
+	#preco-novo-card1,
+	#preco-novo-card2,
+	#preco-novo-card3{
+		font-size: display;
+	}
+		
+}
 
 @media (min-width: 1080px) and (max-width: 1200px) {
 	.header-content p{
@@ -285,6 +539,7 @@ header {
 		margin-right: 200px;
 	}
 }
+
 
 @media (max-width: 900px) {
 	.header-content p {

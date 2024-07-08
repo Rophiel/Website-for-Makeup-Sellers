@@ -17,30 +17,68 @@
 
 <body>
   <div class="top-bar1">
-    <p> Fretes Grátis em Compras Acima de R$350 </p>
+    <p> Fretes Grátis em Compras Acima de <span style="font-weight: bold;">R$350</span></p>
   </div>
   <div class="top-bar2">
     <input type="search" name="barra-Pesquisa" id="barraPesquisa">
-    <img src="images/perfil-icone-cinza.png" alt="" id="iconeLogin">
+    <img src="images/perfil-icone-cinza.png" alt="" id="iconeLogin" onmouseover="mudarPerfil(this.id)" onmouseout="restaurarPerfil(this.id)">
     <p id="titulo-perfil"> MINHA CONTA </p>
     <p id="titulo-CadastroOuLogin"> ENTRE OU CADASTRE </p>
     <img src="images/coracao-cinza-removebg-preview.png" id="itens-favoritos" onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
+    <div class="circle-quantidade" id="circle-quantidade">
+      <span id="circle-quantidade-value">0</span>
+    </div>
     <img src="images/bolsa-cinza-removebg-preview.png" id="itens-sacola" onmouseover="mudarIcone(this.id)" onmouseout="restaurarIcone(this.id)">
   </div>
   <header>
     <nav>
-      <div class="questrial-regular">
-        <div class="header-content">
-          <p id="titulo-acessorio">ACESSÓRIOS <img src="images/chevro-icone-cinza.png" alt="seta-chevron" id="chevron-icone" class="responsive-title"></p>
-          <p id="titulo-labios">LÁBIOS <img src="images/chevro-icone-cinza.png" alt="seta-chevron" id="chevron-icone" class="responsive-title"></p>
-          <p id="titulo-rosto">ROSTO <img src="images/chevro-icone-cinza.png" alt="seta-chevron" id="chevron-icone" class="responsive-title"></p>
-          <p id="titulo-skincare">SKINCARE <img src="images/chevro-icone-cinza.png" alt="seta-chevron" id="chevron-icone" class="responsive-title"></p>
-          <p id="titulo-corpo">CORPO <img src="images/chevro-icone-cinza.png" alt="seta-chevron" id="chevron-icone" class="responsive-title"></p>
-          <p id="titulo-lancamento">LANÇAMENTOS </p>
+        <div class="questrial-regular">
+            <div class="header-content">
+              <div class="menu-item" id="acessorios">
+                <a id="titulo-acessorio"> ACESSÓRIOS <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
+                <div class="submenu">
+                  <a href="#">Item 1</a>
+                  <a href="#">Item 2</a>
+                  <a href="#">Item 3</a>
+                </div>
+              </div>
+              <div class="menu-item" id="labios">
+                <a id="titulo-labios"> LÁBIOS <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
+                <div class="submenu">
+                  <a href="#">Item 1</a>
+                  <a href="#">Item 2</a>
+                  <a href="#">Item 3</a>
+                </div>
+              </div>
+              <div class="menu-item" id="rosto">
+                <a id="titulo-rosto"> ROSTO <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
+                <div class="submenu">
+                  <a href="#">Item 1</a>
+                  <a href="#">Item 2</a>
+                  <a href="#">Item 3</a>
+                </div>
+              </div>
+              <div class="menu-item" id="skincare">
+                <a id="titulo-skincare"> SKINCARE <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
+                <div class="submenu">
+                  <a href="#">Item 1</a>
+                  <a href="#">Item 2</a>
+                  <a href="#">Item 3</a>
+                </div>
+              </div>
+              <div class="menu-item" id="corpo">
+                <a id="titulo-corpo"> CORPO <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
+                <div class="submenu">
+                  <a href="#">Item 1</a>
+                  <a href="#">Item 2</a>
+                  <a href="#">Item 3</a>
+                </div>
+              </div>
+              <a id="titulo-lancamento"> LANÇAMENTOS </a>
+            </div>
         </div>
-      </div>
     </nav>
-  </header>
+</header>
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="position: relative;">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -81,7 +119,7 @@
       <img src="images/93026_1.jpg" alt="batom" id="produto-card1">
       <img src="images/coracao-cinza-removebg-preview.png" alt="coracao-favorito" id="coracao-favorito-card1"
         onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
-      <p style="margin-left: 29px; margin-top: 30px;"> MAKEUP </p>
+      <p style="margin-left: 29px; margin-top: 30px;" id="titulo-produto1"> MAKEUP </p>
       <P id="preco-antigo-card1" style="margin-left: 29px; color: rgb(202, 202, 202); position: relative;"><s>R$ 30,90
         </s></P>
       <p id="preco-novo-card1" style="margin-left: 29px; font-size: 20pt;"> R$ 23,90 </p>
@@ -91,20 +129,40 @@
       <img src="images/GUEST_1dad7ebe-9f97-42a3-a006-e6f5d82644e2.jpg" alt="bush" id="produto-card2">
       <img src="images/coracao-cinza-removebg-preview.png" alt="coracao-favorito" id="coracao-favorito-card2"
         onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
-      <p style="margin-left: 29px; margin-top: 30px;"> MAKEUP </p>
-      <p id="preco-novo-card2" style="margin-left: 29px; font-size: 20pt; margin-top: 50px;"> R$ 52,90 </p>
+      <p style="margin-left: 29px; margin-top: 30px;" id="titulo-produto2"> MAKEUP </p>
+      <p id="preco-novo-card2"> R$ 52,90 </p>
       <button id="botao-adicionar"> ADICIONAR </button>
     </div>
     <div class="card3">
       <img src="images/pincel.png" alt="pincel" id="produto-card3">
       <img src="images/coracao-cinza-removebg-preview.png" alt="coracao-favorito" id="coracao-favorito-card3"
         onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
-      <p style="margin-left: 29px; margin-top: 30px;"> MAKEUP </p>
+      <p style="margin-left: 29px; margin-top: 30px;" id="titulo-produto3"> MAKEUP </p>
       <p id="preco-novo-card3" style="margin-left: 29px; font-size: 20pt; margin-top: 50px;"> R$ 49,90 </p>
       <button id="botao-adicionar"> ADICIONAR </button>
     </div>
   </div>
+  <footer>
+    <div class="footer-marca">
+      <ul>
+        <li style="font-weight: bold; font-size: 12pt;"> NOME DA MARCA </li>
+        <br>
+        <li><a href="">SOBRE NÓS</a></li>
+        <li><a href="">CARREIRAS</a></li>
+      </ul>
+    </div>
+    <div class="footer-suporte">
+      <ul>
+        <li style="font-weight: bold; font-size: 13pt;"> SUPORTE </li>
+        <br>
+        <li><a href="">POLÍTICA DE PRIVACIDADE</a></li>
+        <li><a href="">POLÍTICA DE COOKIES</a></li>
+        <li><a href="">REGULAMENTO</a></li>
+        <li><a href="">TROCA E DEVOLUÇÃO</a></li>
+        <li><a href="">FALE CONOSCO</a></li>
+      </ul>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
-
 </html>

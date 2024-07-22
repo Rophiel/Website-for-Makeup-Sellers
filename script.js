@@ -22,3 +22,11 @@ function mudarPerfil(id){
 function restaurarPerfil(id){
     document.getElementById(id).src = "images/perfil-icone-cinza.png";
 }
+
+function mudarSanduiche(id){
+    document.getElementById(id).src = "images/sanduiche-icone-rosa.png";
+}
+
+function restaurarSanduiche(id){
+    document.getElementById(id).src = "images/sanduiche-icone-cinza.png";
+}

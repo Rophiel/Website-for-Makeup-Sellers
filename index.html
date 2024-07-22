@@ -20,6 +20,9 @@
     <p> Fretes Grátis em Compras Acima de <span style="font-weight: bold;">R$350</span></p>
   </div>
   <div class="top-bar2">
+    <div class="sanduiche-menu">
+      <img src="/images/sanduiche-icone-cinza.png" alt="" id="sanduiche-menu" onmouseover="mudarSanduiche(this.id)" onmouseout="restaurarSanduiche(this.id)">
+    </div>
     <input type="search" name="barra-Pesquisa" id="barraPesquisa">
     <img src="images/perfil-icone-cinza.png" alt="" id="iconeLogin" onmouseover="mudarPerfil(this.id)" onmouseout="restaurarPerfil(this.id)">
     <p id="titulo-perfil"> MINHA CONTA </p>
@@ -37,6 +40,7 @@
               <div class="menu-item" id="acessorios">
                 <a id="titulo-acessorio"> ACESSÓRIOS <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
                 <div class="submenu">
+                  <br>
                   <a href="#">Item 1</a>
                   <a href="#">Item 2</a>
                   <a href="#">Item 3</a>
@@ -45,6 +49,7 @@
               <div class="menu-item" id="labios">
                 <a id="titulo-labios"> LÁBIOS <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
                 <div class="submenu">
+                  <br>
                   <a href="#">Item 1</a>
                   <a href="#">Item 2</a>
                   <a href="#">Item 3</a>
@@ -53,6 +58,7 @@
               <div class="menu-item" id="rosto">
                 <a id="titulo-rosto"> ROSTO <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
                 <div class="submenu">
+                  <br>
                   <a href="#">Item 1</a>
                   <a href="#">Item 2</a>
                   <a href="#">Item 3</a>
@@ -61,6 +67,7 @@
               <div class="menu-item" id="skincare">
                 <a id="titulo-skincare"> SKINCARE <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
                 <div class="submenu">
+                  <br>
                   <a href="#">Item 1</a>
                   <a href="#">Item 2</a>
                   <a href="#">Item 3</a>
@@ -69,6 +76,7 @@
               <div class="menu-item" id="corpo">
                 <a id="titulo-corpo"> CORPO <img src="images/chevro-icone-cinza.png" id="chevron-icone" alt="seta-chevron" class="responsive-title"></a>
                 <div class="submenu">
+                  <br>
                   <a href="#">Item 1</a>
                   <a href="#">Item 2</a>
                   <a href="#">Item 3</a>
@@ -125,7 +133,7 @@
       <button id="botao-adicionar"> ADICIONAR </button>
     </div>
     <div class="card2">
-      <img src="images/GUEST_1dad7ebe-9f97-42a3-a006-e6f5d82644e2.jpg" alt="bush" id="produto-card2">
+      <img src="images/GUEST_1dad7ebe-9f97-42a3-a006-e6f5d82644e2.jpg" alt="blush" id="produto-card2">
       <img src="images/coracao-cinza-removebg-preview.png" alt="coracao-favorito" id="coracao-favorito-card2"
         onmouseover="mudarImagem(this.id)" onmouseout="restaurarImagem(this.id)">
       <p id="titulo-produto2"> MAKEUP </p>
@@ -141,27 +149,42 @@
       <button id="botao-adicionar"> ADICIONAR </button>
     </div>
   </div>
+  <div class="promocao-form">
+    <p> Cadastre-se e ganhe 15% de desconto na sua primeira compra! </p>
+    <form action="">
+      <div class="promocao-input">
+        <input type="text" name="nome" id="nome" placeholder="  NOME">
+        <input type="text" name="email" id="email" placeholder="  EMAIL">
+        <input type="submit" name="submit-promo" id="submit-promo">
+      </div>
+    </form>
+  </div>
   <footer>
-    <div class="footer-marca">
-      <ul>
-        <li style="font-weight: bold; font-size: 12pt;"> NOME DA MARCA </li>
-        <br>
-        <li><a href="">SOBRE NÓS</a></li>
-        <li><a href="">CARREIRAS</a></li>
-      </ul>
-    </div>
-    <div class="footer-suporte">
-      <ul>
-        <li style="font-weight: bold; font-size: 13pt;"> SUPORTE </li>
-        <br>
-        <li><a href="">POLÍTICA DE PRIVACIDADE</a></li>
-        <li><a href="">POLÍTICA DE COOKIES</a></li>
-        <li><a href="">REGULAMENTO</a></li>
-        <li><a href="">TROCA E DEVOLUÇÃO</a></li>
-        <li><a href="">FALE CONOSCO</a></li>
-      </ul>
-    </div>
-  </footer>
+    <footer>
+      <div class="footer-marca">
+        <ul>
+          <li style="font-weight: bold; font-size: 12pt;"> NOME DA MARCA </li>
+          <li><a href="">SOBRE NÓS</a></li>
+          <li><a href="">CARREIRAS</a></li>
+        </ul>
+      </div>
+      <div class="footer-suporte">
+        <ul>
+          <li style="font-weight: bold; font-size: 13pt;"> SUPORTE </li>
+          <li><a href="">POLÍTICA DE PRIVACIDADE</a></li>
+          <li><a href="">POLÍTICA DE COOKIES</a></li>
+          <li><a href="">REGULAMENTO</a></li>
+          <li><a href="">TROCA E DEVOLUÇÃO</a></li>
+          <li><a href="">FALE CONOSCO</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Millennium Dev's Company. Todos os direitos reservados.</p>
+      </div>
+      <div class="desenvolvido">
+        <p><a href="https://github.com/Rophiel">Desenvolvido por Rophiel</a></p>
+      </div>
+  </footer>  
   <script src="script.js"></script>
 </body>
-</html>
+</html> 

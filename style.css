@@ -51,6 +51,17 @@ body {
 	position: fixed;
 	z-index: 999;
 }
+
+.sanduiche-menu img{
+	position: absolute;
+	width: 100%;
+	width: 35px;
+	margin-top: 18px;
+	margin-left: 29px;
+	cursor: pointer;
+	left: 0;
+}
+
 .top-bar2 input {
 	margin-top: 15px;
 	margin-left: 100px;
@@ -70,6 +81,23 @@ body {
 	background-position: calc(100% - 10px) center; /* Posicionar o ícone à direita */
 	background-size: 30px; /* Definir o tamanho do ícone */
 	position: absolute;
+}
+
+/* Define um tamanho padrão para o carrossel */
+#carouselExampleIndicators {
+    max-width: 100%; /* Garante que o carrossel nunca exceda a largura do container pai */
+    margin: auto; /* Centraliza o carrossel horizontalmente */
+}
+
+.carousel-inner {
+    max-height: 500px; /* Altura máxima padrão */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a altura máxima */
+}
+
+.carousel-item img {
+    max-height: 100%;
+    width: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Cobre o espaço do carrossel de forma proporcional */
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -190,17 +218,17 @@ nav{
 .submenu {
 	display: none; /* Esconde o submenu inicialmente */
 	position: fixed; /* Posiciona o submenu em relação ao menu-item */
-	top: 100px; /* Posiciona o submenu abaixo do item do menu */
-
+	top: 75px; /* Posiciona o submenu abaixo do item do menu */
 	margin-top: 79px;
 	left: 50%; /* Alinha o submenu à esquerda do item do menu */
 	transform: translateX(-50%); /* Ajusta para centralizar exatamente */
-	background-color: #ff0000; /* Define a cor de fundo do submenu */
+	background-color: #000000; /* Define a cor de fundo do submenu */
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao submenu */
 	min-width: 200px; /* Define a largura mínima do submenu */
-	width: 1190px;
-	height: 500px;
+	width: 1270px;
+	height: 300px;
 	z-index: 1001; /* Garante que o submenu fique acima de outros elementos */
+	text-align: left;
 }
   
 .submenu a {
@@ -248,6 +276,10 @@ nav{
 .card1 #produto-card1,
 .card2 #produto-card2,
 .card3 #produto-card3 {
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 	width: 195px;
 	height: 190px;
 	margin-top: 145px;
@@ -325,42 +357,104 @@ nav{
     z-index: 1; 
 }
 
-footer{
+footer {
 	background-color: black;
-	margin-top: 150px;
-	bottom: 0;
-	height: 300px;
+	color: white;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+footer ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
 }
 
 footer ul li {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	color: white;
+	margin: 5px 0;
 	font-size: 15px;
-	margin: 5px;
 }
 
-.footer-marca{
-	position: absolute;
-	margin-top: 20px;
+.footer-marca, .footer-suporte {
+	flex: 1;
 }
 
-.footer-marca a {
+.footer-marca a, .footer-suporte a {
 	text-decoration: none;
 	color: white;
 }
 
-.footer-suporte{
-	margin-top: 20px;
-	margin-left: 340px;
-	position: absolute;
+.footer-copyright {
+	margin-top: 100px;
+	margin-left: 0px;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
 }
 
-.footer-suporte a{
-	text-decoration: none;
-	color: white;
+
+/*ESPAÇO PARA INSERÇÃO DE EMAIL PARA RECEBER PROMOÇÕES*/
+.promocao-form{
+	margin-top: 130px;
+	background-color:rgb(231, 160, 246);
+	position: relative;
+	width: 100%;
+	height: 260px;
+	color: #ffffff;
+	text-align: center;
+	padding: 25px 0px 0px 0px;
 }
+
+.promocao-form p{
+	font-size: 20px;
+}
+
+.promocao-form input{
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	padding: 10px;
+}
+
+#nome{
+	width: 140px;
+	height: 44px;
+}
+
+#email{
+	width: 190px;
+	height: 44px;
+}
+
+
+#submit-promo{
+	width: 160px;
+}
+
+#submit-promo:hover{
+	color: white;
+	background-color: #000000;
+	transition: background 0.5s;
+}
+
+.desenvolvido a{
+	margin-left: 1000px;
+	text-decoration: none;
+	color: #4e4b4b;
+}
+
+.promocao-input{
+	margin-top: 55px;
+}
+
+.promocao-form ::placeholder{
+	font-size: 10pt;
+}
+
+
 
 @media (max-width: 1920px){
 
@@ -540,6 +634,57 @@ footer ul li {
 		
 }
 
+@media (max-width: 1366px){
+
+	#itens-favoritos {
+		margin-top: 20px;
+		margin-left: 1170px;
+		width: 35px;
+		position: absolute;
+		cursor: pointer;
+	}
+	
+	#itens-sacola {
+		width: 35px;
+		margin-top: 20px;
+		margin-left: 1215px;
+		position: absolute;
+		cursor: pointer;
+	}
+
+	#iconeLogin{
+		margin-left: 920px;
+	}
+
+	.circle-quantidade {
+		width: 19px;
+		height: 19px;
+		background-color:  rgb(231, 160, 246);
+		margin-top: 35px;
+		border-radius: 50%;
+		margin-left: 1235px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		position: absolute;
+		justify-content: center;
+    	align-items: center;
+		text-align: center;
+		z-index: 10;
+		font-size: 9.8pt;
+		color:  rgb(237, 237, 237);
+		font-weight: bold;
+	}
+
+	.circle-quantidade-value{
+		top: 0;
+		bottom: 0;
+	}
+
+	#titulo-perfil,
+	#titulo-CadastroOuLogin{
+		margin-left: 960px;
+	}
+}
+
 @media (min-width: 1080px) and (max-width: 1200px) {
 	.header-content p{
 		display: none; /*Tira as letras*/
@@ -565,6 +710,53 @@ footer ul li {
 	}
 }
 
+@media (max-width: 1024px){
+
+	#itens-favoritos {
+		margin-top: 20px;
+		margin-left: 915px;
+		width: 35px;
+		position: absolute;
+		cursor: pointer;
+	}
+	
+	#itens-sacola {
+		width: 35px;
+		margin-top: 20px;
+		margin-left: 955px;
+		position: absolute;
+		cursor: pointer;
+	}
+
+	.circle-quantidade{
+		margin-left: 974px;
+	}
+
+	#iconeLogin{
+		margin-left: 690px;
+	}
+
+	#titulo-perfil,
+	#titulo-CadastroOuLogin{
+		margin-left: 730px;
+	}
+
+	#coracao-favorito-card1,
+	#coracao-favorito-card2, 
+	#coracao-favorito-card3{
+		margin-left: 180px;
+	}
+
+	#botao-adicionar{
+		margin-left: 24px;
+	}
+
+	.card1 #produto-card1,
+	.card2 #produto-card2,
+	.card3 #produto-card3{
+
+		margin-left: 48px;
+}
 
 @media (max-width: 900px) {
 	.header-content p {
@@ -573,11 +765,67 @@ footer ul li {
 }
 
 
-@media (min-width: 441px) and (max-width: 539px) {
-	.header-content p {
-		font-size: 0.79rem;
-		margin: 0 6px;
+@media (min-width: 430px) and (max-width: 539px) {
+
+	.top-bar1{
+		height: 60px;
 	}
+
+	.top-bar1 p {
+		margin-top: 18px;
+		font-size: 13pt;
+		margin-right: 119px;
+		font-weight: bold;
+	}
+
+	.top-bar2 input{
+		display: none;
+	}
+
+	#iconeLogin{
+		margin-top: 42px;
+		margin-left: 60px;
+		width: 24px;
+	}
+
+	.sanduiche-menu img{
+		position: absolute;
+		margin-left: 100px;
+	}
+
+	header{
+		display: none;
+	}
+
+	.carousel-inner {
+        max-height: 500px; /* Reduz a altura máxima para telas menores */
+    }
+
+    .carousel-item img {
+        width: 100%; /* Ajusta a largura da imagem para 100% do container do carrossel */
+		width: 20px;
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+	.titulo-lancamentos #titleLancamentos{
+		font-size: 15pt;
+		margin-left: 18px;
+	}
+
+	.titulo-lancamentos #descricaoLancamentos{
+		font-size: 11pt;
+		margin-left: 18px;
+	}
+
+	.card1,
+	.card2,
+	.card3{
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		
+	}
+
 }
 
 @media (min-width: 412px) and (max-width: 440px){
@@ -623,3 +871,4 @@ footer ul li {
 	object-fit: cover;
 	object-position: top;
 }
+
